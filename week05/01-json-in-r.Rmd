@@ -15,7 +15,7 @@ library("tidyverse")
 Specify the directory where the JSON files are stored:
 
 ```{r}
-current_dir <- "yourdirectoryhere"
+current_dir <- "/Users/henrydehe/OneDrive/LSE Year 2/MY472 Data for Data Scientists/Github Repositories/lse-my472.github.io/week05/test_jsons"
 ```
 
 Reading/parsing the first file into R:
