@@ -42,16 +42,33 @@ Your code here:
 ```{r}
 
 # Transform date column to datetime (lubridate package!)
-
+unemp <- unemp %>% 
+  mutate(date = ymd(date))
 
 
 # Create a line-plot with unemployment and date
 
 
-
 # Fix axes and add colored rectangles
 
+plot <- ggplot()+
+  scale_x_date(limits = c(min(unemp$date), max(unemp$date)),
+               expand = c(0,0))+
+  geom_rect(data = pres,
+            aes(xmin = start,
+                xmax = end,
+                ymin = -Inf,
+                ymax = Inf,
+                fill = party),
+            alpha = 1/2)+
+  geom_line(data = unemp,
+            aes(x = date, y = unemp))
+  
 
+
+
+
+plot
 
 # Adding president names
 
