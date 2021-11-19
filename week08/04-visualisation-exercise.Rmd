@@ -7,10 +7,10 @@ output: html_document
 
 
 ```{r}
-library("tidyverse")
-library("plotly")
-library("scales")
-library("lubridate")
+suppressMessages(library("tidyverse"))
+suppressMessages(library("plotly"))
+suppressMessages(library("scales"))
+suppressMessages(library("lubridate"))
 ```
 
 
@@ -66,7 +66,7 @@ plot2 <- plot1+
                 ymin = -Inf,
                 ymax = Inf,
                 fill = party),
-            alpha = 1/4)
+            alpha = 1/6)
 
 plot2
 
@@ -86,11 +86,14 @@ plot3
 # Adding lines to separate presidencies
 
 plot4 <- plot3+
-  geom_line(data = pres,
-            aes(x = start,
-                y = ))
+  geom_vline(data = pres,
+             aes(xintercept = start),
+             linetype = "dashed",
+             color = "darkgrey")
+
 
 plot4
+
 # Finally, moving legend and removing x axis title
 
 
