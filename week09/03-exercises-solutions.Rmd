@@ -24,7 +24,7 @@ dbGetQuery(db,
     AS number_engaging FROM tweets")
 ```
 
-3. What perecent of tweets are classified as impolite?
+3. What percent of tweets are classified as impolite?
 
 ```{r}
 # we need to multiply by a float (100.0) because otherwise 
