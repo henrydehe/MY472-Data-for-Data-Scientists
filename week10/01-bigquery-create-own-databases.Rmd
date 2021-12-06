@@ -18,13 +18,13 @@ First, we need to create a project with the BigQuery sandbox as described [here]
 
 ```{r}
 # Project name (project ID)
-project_name <- "tba"
+project_name <- "my472-pr-id"
 
 # Billing (project ID)
-billing_id <- "tba"
+billing_id <- "my472-pr-id"
 
 # Dataset name (created on website)
-dataset_name <- "tba"
+dataset_name <- "facebook"
 ```
 
 We can now use the `DBI` package and syntax that we have used before to access our online database, add and delete tables, and run queries.
@@ -43,7 +43,7 @@ As an example, let us add the congress table to the database. First read in the 
 
 ```{r}
 # Reading the first file into R
-congress <- read.csv("data/congress-facebook-2017.csv",
+congress <- read.csv("/Users/henrydehe/OneDrive/LSE Year 2/MY472 Data for Data Scientists/Example Data/facebook-data/congress-facebook-2017.csv",
 	stringsAsFactors = FALSE)
 ```
 

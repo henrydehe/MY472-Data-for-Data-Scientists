@@ -25,7 +25,7 @@ This dataset contains the number of crimes at two different geographic levels of
 project_name <- "bigquery-public-data"
 
 # Billing (main project ID)
-billing_info <- "my472-333417"
+billing_info <- "my472-pr-id"
 
 # Dataset name (London crime database within the public databases)
 dataset_name <- "london_crime"
